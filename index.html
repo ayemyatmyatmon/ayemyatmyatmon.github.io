@@ -16,10 +16,10 @@
     <title>Aye Myat Myat Mon | Portfolio</title>
 
     <!-- Animate -->
-    <link href="/asset/css/animate.min.css" rel="stylesheet">
+    <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
 
     <!-- Owl Carousel -->
-    <link href="/asset/css/owl.carousel.css" rel="stylesheet">
+    <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" rel="stylesheet" />
@@ -28,12 +28,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet" />
 
     <!-- Bootstrap CSS  -->
-    <link href="/asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Style CSS-->
-    <link href="/asset/css/style.css" rel="stylesheet">
+    <link href="{{ asset('style.css') }}" rel="stylesheet">
 
     <!-- Responsive CSS-->
-    <link href="/asset/css/responsive.css" rel="stylesheet">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -51,15 +53,14 @@
         <nav id="sticky-header" class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <!-- Logo -->
-                    <!-- <a href="index.html" class="navbar-brand"><img src="/asset/images/girl.png"></a> -->
+                    {{-- <a href="index.html" class="navbar-brand"><img src="{{asset('images/girl.png')}}"></a> --}}
                     <!-- End Logo -->
                 </div>
                 <!-- Navbar-collapse -->
@@ -93,7 +94,7 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-12">
                             <div class="intro-left">
-                                <img class="img-responsive" src="/asset/images/beauty.png" alt="my-photo">
+                                <img class="img-responsive" src="{{ asset('images/beauty.png') }}" alt="my-photo">
                             </div>
                         </div>
                         <div class="col-md-8 col-sm-12">
@@ -197,26 +198,45 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-md-6 text-center">
+                <div class="col-md-4 text-center">
                     <div class="about-content ">
                         <h3>WORK EXPERIENCES</h3>
                         <div class="line"></div>
-                        <p>
-                            <i class="fab fa-gg"></i> Role : Accountant<br>
-                            <i class="fab fa-gg"></i> Company : Beauty Diary<br>
-                            <i class="fab fa-gg"></i> Period : 1 Year ( Jan 2017 – Dec 2017 )<br>
-                            <i class="fab fa-gg"></i> Contract Type : Full Time<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="about-content ">
-                        <h3></h3>
-                        <div></div>
                         <p style="margin-top:30px;">
                             <i class="fab fa-gg"></i> Role : Underwriter<br>
                             <i class="fab fa-gg"></i> Company : Rent 2 Own<br>
                             <i class="fab fa-gg"></i> Period : 2 Year ( Jan 2018 – Dec 2020 )<br>
+                            <i class="fab fa-gg"></i> Contract Type : Full Time<br>
+                        </p>
+                        {{-- <p>
+                            <i class="fab fa-gg"></i> Role : Accountant<br>
+                            <i class="fab fa-gg"></i> Company : Beauty Diary<br>
+                            <i class="fab fa-gg"></i> Period : 1 Year ( Jan 2017 – Dec 2017 )<br>
+                            <i class="fab fa-gg"></i> Contract Type : Full Time<br>
+                        </p> --}}
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="about-content ">
+                        <h3></h3>
+                        <div></div>
+                        <p style="margin-top:30px;">
+                            <i class="fab fa-gg"></i> Role : Junior Web Developer<br>
+                            <i class="fab fa-gg"></i> Company : NineComplex<br>
+                            <i class="fab fa-gg"></i> Period : 1 Year 7 Months ( April 2022 – November 2023 )<br>
+                            <i class="fab fa-gg"></i> Contract Type : Full Time<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <div class="about-content ">
+                        <h3></h3>
+                        <div></div>
+                        <p style="margin-top:30px;">
+                            <i class="fab fa-gg"></i> Role : Senior Web Developer<br>
+                            <i class="fab fa-gg"></i> Company : AGGA<br>
+                            <i class="fab fa-gg"></i> Period : 1 Year 7 Months ( Jan 2024 – Present )<br>
                             <i class="fab fa-gg"></i> Contract Type : Full Time<br>
                         </p>
                     </div>
@@ -357,7 +377,7 @@
                 <!-- Single Project -->
                 <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
                     <div class="hovereffect">
-                        <img class="img-responsive" src="/asset/images/work/wallet.jpg" alt="">
+                        <img class="img-responsive" src="{{ asset('images/work/wallet.jpg') }}" alt="">
                         <div class="hvr-overlay">
                             <h3>Magic Pay (Mini Wallet Web App) (Laravel Project)</h3>
                             <a class="info" href="#work-1" data-toggle="modal"></a>
@@ -388,7 +408,7 @@
                 <!-- Single Project -->
                 <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
                     <div class="hovereffect">
-                        <img class="img-responsive" src="/asset/images/work/ninja.jpg" alt="">
+                        <img class="img-responsive" src="{{ asset('images/work/ninja.jpg') }}" alt="">
                         <div class="hvr-overlay">
                             <h3 style="margin-bottom:20px;">Ninja HR (Employee Management, Project Management Web App)
                                 (Laravel Project)</h3>
@@ -411,6 +431,138 @@
                             <li>Project Management with taskboard</li>
                             <li>CheckIn & CheckOut (with QR and Pin code)</li>
                             <li>Company Setting</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            {{-- DongFang Pay --}}
+
+            <div class="row">
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="{{ asset('images/work/dongfangpay.jpg') }}" alt="">
+                        <div class="hvr-overlay">
+                            <h3 style="margin-bottom:20px;">DongFang Pay
+                                (Laravel Project)</h3>
+                            <a class="info" href="#work-1" data-toggle="modal"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="experience text-left" style="padding-left:90px">
+                        <h4 style="margin-bottom:20px;">DongFang Pay
+                            (Laravel Project)</h4>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Auth</li>
+                            <li>User Management</li>
+                            <li>Role & Permission</li>
+                            <li>E-Money Transfer with QR & Phone Number</li>
+                            <li>Transaction</li>
+                            <li>SMS notification</li>
+                            <li>API Development</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            {{-- Ayarnet --}}
+
+            <div class="row">
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="{{ asset('images/work/ayarnet.jpg') }}" alt="">
+                        <div class="hvr-overlay">
+                            <h3 style="margin-bottom:20px;">Ayarnet
+                                (Laravel Project)</h3>
+                            <a class="info" href="#work-1" data-toggle="modal"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="experience text-left" style="padding-left:90px">
+                        <h4 style="margin-bottom:20px;">Ayarnet
+                            (Laravel Project)</h4>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Inventory, User, Service Team Member, Internet
+                                Plan, Role & Permission, etc CRUD</li>
+                            <li> Reporting with Excel Export</li>
+                            <li> Invoice Calculation</li>
+                            <li>API Development</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            {{-- Unicef --}}
+
+            <div class="row">
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="{{ asset('images/work/unicef.jpg') }}" alt="">
+                        <div class="hvr-overlay">
+                            <h3 style="margin-bottom:20px;">UNICEF
+                                (Laravel Project)</h3>
+                            <a class="info" href="#work-1" data-toggle="modal"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="experience text-left" style="padding-left:90px">
+                        <h4 style="margin-bottom:20px;">UNICEF
+                            (Laravel Project)</h4>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Beneficiary, User, Disbursement, Unicef Program,
+                                Role and Permission, etc Management</li>
+                            <li> FSP Preparation to send to Wave Money</li>
+                            <li> Reporting with Excel Export (with cron job)</li>
+                            <li>API Development</li>
+                            <li>Send Onboarding and Targeting</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            {{-- myanmar accountancy council --}}
+              <div class="row">
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="{{ asset('images/work/mac.jpg') }}" alt="">
+                        <div class="hvr-overlay">
+                            <h3 style="margin-bottom:20px;">Myanmar Accountancy Council
+                                (Laravel Project)</h3>
+                            <a class="info" href="#work-1" data-toggle="modal"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Project -->
+                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                    <div class="experience text-left" style="padding-left:90px">
+                        <h4 style="margin-bottom:20px;">Myanmar Accountancy Council
+                            (Laravel Project)</h4>
+                        <div class="line"></div>
+                        <ul>
+                            <li>User Dashboard & Admin Dashboard</li>
+                            <li>Graduation, User, Certificate, etc Management</li>
+                            <li>Reporting with Excel Export</li>
+                            <li>Calculation CPD Hours</li>
+                            <li>Payment Gateway Process</li>
                         </ul>
 
                     </div>
@@ -460,8 +612,7 @@
                         </div>
                         <div class="content mt-4">
                             <h5 class="title text-uppercase" style="margin:15px !important;">Email</h5>
-                            <a href="mailto:htetlinthu726@gmail.com" class="text-primary"
-                                style="margin-top:10px !important;">ayemyatmyatmon726@gmail.com</a>
+                            <a href="mailto:htetlinthu726@gmail.com" class="text-primary" style="margin-top:10px !important;">ayemyatmyatmon726@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -470,13 +621,11 @@
                 <div class="col-md-4 mt-4 pt-2">
                     <div class="contact-detail text-center">
                         <div class="icon">
-                            <i data-feather="map-pin" class="fas fa-map-marker-alt"
-                                style="font-size:30px !important;"></i>
+                            <i data-feather="map-pin" class="fas fa-map-marker-alt" style="font-size:30px !important;"></i>
                         </div>
                         <div class="content mt-4">
                             <h5 class="title text-uppercase" style="margin:15px !important;">Location</h5>
-                            <a href="#" class="video-play-icon text-primary"
-                                style="margin-top:10px !important;">Myanmar</a>
+                            <a href="#" class="video-play-icon text-primary" style="margin-top:10px !important;">Myanmar</a>
                         </div>
                     </div>
                 </div>
@@ -504,30 +653,31 @@
     <!-- JAVASCRIPT
          ================================================== -->
     <!-- Jquery -->
-    <script src="/asset/js/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
     <!-- Bootstrap JS-->
-    <script src="/asset/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <!-- Active JS -->
-    <script src="/asset/js/active.js"></script>
+    <script src="{{ asset('js/active.js') }}"></script>
     <!-- Jquery Easing JS -->
-    <script src="/asset/js/jquery.easing.min.js"></script>
+    <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
     <!-- Typed JS -->
-    <script src="/asset/js/typed.min.js"></script>
+    <script src="{{ asset('js/typed.min.js') }}"></script>
     <!-- Google map JS -->
-    <script src="/asset/js/gmap3.min.js"></script>
+    <script src="{{ asset('js/gmap3.min.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoF0VZ0bzb8BpGJCwKrm3t4R5dmc-27kE"></script>
     <!-- Waypoint and Counters JS -->
-    <script src="/asset/js/waypoints.min.js"></script>
-    <script src="/asset/js/jquery.counterup.min.js"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
     <!-- Wow JS -->
-    <script src="/asset/js/wow.min.js"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
     <!-- Bootstrap-dropdownhover -->
-    <script src="/asset/js/bootstrap-dropdownhover.min.js"></script>
+    <script src="{{ asset('js/bootstrap-dropdownhover.min.js') }}"></script>
     <!-- Owl Carousel -->
-    <script src="/asset/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <!-- Contact form JS -->
-    <script src="/asset/js/jqBootstrapValidation.js"></script>
-    <script src="/asset/js/contact_me.js"></script>
+    <script src="{{ asset('js/jqBootstrapValidation.js') }}"></script>
+    <script src="{{ asset('js/contact_me.js') }}"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script> --}}
 </body>
 
 </html>
